@@ -43,8 +43,7 @@ const Home = () => {
 
             <div>
 
-            <p>
-Image result for travel agency description example. A travel agency is a private retailer or public service that provides travel and tourism-related services to the general public on behalf of accommodation or travel suppliers to offer different kinds of travelling packages for each destination.</p>
+            <p>Image result for travel agency description example. A travel agency is a private retailer or public service that provides travel and tourism-related services to the general public on behalf of accommodation or travel suppliers to offer different kinds of travelling packages for each destination.</p>
             </div>
 
             <div className="add_btn" class="mt-4">

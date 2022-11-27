@@ -255,9 +255,10 @@ console.log(getuserdata)
 
 
               
+              <button type="button" class="btn btn-primary" onClick={addinputdata1}>Register</button>
 
 
-              <MDBBtn className='mb-4' size='lg' type="submit" onClick={addinputdata1}>Register</MDBBtn>
+              {/* <MDBBtn className='mb-4' size='lg' type="submit" onClick={addinputdata1}>Register</MDBBtn> */}
 
           
 

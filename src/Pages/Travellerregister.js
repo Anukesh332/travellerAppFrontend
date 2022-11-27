@@ -16,6 +16,7 @@ import {
   }
   from 'mdb-react-ui-kit';
 import  travelK  from '../images/travelk.jpg'
+import { MDBRadio } from 'mdb-react-ui-kit';
 
 
 
@@ -192,6 +193,10 @@ const addinputdata = async(e)=>{
                 <MDBIcon fas icon="lock me-3" size='lg'/>
                 <MDBInput label='Traveller Gender' id='form3' type='text' name="TravellerGender" value={inpval.TravellerGender} onChange={setdata} placeholder="Enter Gender"/>
               </div>
+                {/* <div className="d-flex flex-row align-items-center mb-4">
+                <MDBRadio name='TravellerGender' id='flexRadioDefault1' label='Male' value={inpval.TravellerGender} onChange={setdata}/>
+                <MDBRadio name='TravellerGender' id='flexRadioDefault2' label='Female' value={inpval.TravellerGender} onChange={setdata}/>
+                </div> */}
 
 
               <div className="d-flex flex-row align-items-center mb-4">
@@ -201,7 +206,7 @@ const addinputdata = async(e)=>{
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="lock me-3" size='lg'/>
-                <MDBInput label='Traveller Number' id='form3' type='email' name="TravellerNumber" value={inpval.TravellerNumber} onChange={setdata} placeholder="Enter Phone Number"/>
+                <MDBInput label='Traveller Number' id='form3' type='text' name="TravellerNumber" value={inpval.TravellerNumber} onChange={setdata} placeholder="Enter Phone Number"/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
@@ -213,10 +218,10 @@ const addinputdata = async(e)=>{
 
 
               
-
+              <button type="button" class="btn btn-primary" onClick={addinputdata}>Register</button>
         
-
-              <MDBBtn className='mb-4' size='lg' type="submit" onClick={addinputdata}>Register</MDBBtn>
+                
+              {/* <MDBBtn className='mb-4' size='lg' type="submit" onClick={addinputdata}>Register</MDBBtn> */}
 
             
 

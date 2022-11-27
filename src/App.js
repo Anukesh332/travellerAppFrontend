@@ -12,6 +12,9 @@ import Travellerlist from './Pages/Travellerlist';
 import Bookingregister from './Pages/Bookingregister';
 import Bookinglist from './Pages/Bookinglist';
 import Message from './Pages/Message';
+import Start from './Pages/Start';
+import Account from './Pages/Account';
+import Login from './Pages/Login';
 
 
 
@@ -26,6 +29,9 @@ function App() {
        <Route path ='/bookingregister' element={<Bookingregister></Bookingregister>} />
        <Route path ='/bookingtable' element={<Bookinglist></Bookinglist>} />
        <Route path ='/message' element={<Message></Message>} />
+       <Route path ='/' element={<Start></Start>} />
+       <Route path ='/account' element={<Account></Account>} />
+       <Route path ='/loginin' element={<Login></Login>} />
     </Routes>
     </BrowserRouter>
     </div>

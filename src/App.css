@@ -107,17 +107,17 @@ main{
 }
 .logo{
   font-size: 30px;
-  color: yellow;
+  color: blue;
 }
 .bars{
   display: flex;
   font-size: 25px;
   margin-left: 50px;
-  color: yellow;
+  color: blue;
 }
 .link{
   display: flex;
-  color: cyan;
+  color: black;
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;

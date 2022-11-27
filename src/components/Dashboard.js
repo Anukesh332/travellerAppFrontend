@@ -38,7 +38,7 @@ const Dashboard = ({children}) => {
         },
         {
             path:"/message",
-            name:"Message",
+            name:"Feed Back",
             icon:<BiMessageMinus/>
         },
         {
