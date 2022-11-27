@@ -4,6 +4,20 @@ import {posturl1} from './Config'
 import { geturl } from './Config'
 import Dashboard from '../components/Dashboard'
 import Navbar from '../components/Navbar'
+import {
+    MDBBtn,
+    MDBContainer,
+    MDBRow,
+    MDBCol,
+    MDBCard,
+    MDBCardBody,
+    MDBCardImage,
+    MDBInput,
+    MDBIcon
+  }
+  from 'mdb-react-ui-kit';
+import  kingimg1  from '../images/kingimg1.jpg'
+
 
 
 
@@ -125,25 +139,30 @@ console.log(getuserdata)
     <Navbar/>
     <div className="big">
     <Dashboard/>
-    <h1>Home</h1>
-  
-
-
-
-
-
 
       <div>
-            <h1 className='ems'><i>Booking Ticket</i></h1>
-
-
             <div>
-                <form className='regemp'>
-                <div class="form-group">
-                    <label for="exampleInputreferencecode1"><b>Traveller Code</b></label>
+               
+          
+
+
+<MDBContainer fluid>
+
+      <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
+        <MDBCardBody>
+          <MDBRow>
+            <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
+
+              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Booking Register</p>
+
+              <div className="d-flex flex-row align-items-center mb-4 ">
+                <MDBIcon fas icon="user me-3" size='lg'/>
+                {/* <MDBInput label='Traveller Code' id='form1' type='text' className='w-100' value={inpval.TravellerCode} onChange={setdata} name="TravellerCode" placeholder="Enter Traveller Code"/> */}
+                
+    
                         <form>
-                            <select  value={inpval.TarvellerCode} onChange={setdata} name="TravellerCode" class="form-control" className='widthreg'>
-                            <option>Traveller Code  .</option>
+                            <select  value={inpval.TarvellerCode} onChange={setdata} name="TravellerCode" class="form-control">
+                            <option>Select Traveller Code </option>
                             {getuserdata.map((element, id) => {
                                 return (
                                     <>
@@ -153,14 +172,48 @@ console.log(getuserdata)
                                 })}
                             </select>
                         </form>
-                    </div>
+            
 
-                    <div class="form-group">
-                        <label for="exampleInputName1"><b>Traveller Name</b></label>
+                    {/* <MDBDropdown>
+                          <MDBDropdownToggle tag='a' className='btn btn-outline-secondary'>
+                            Traveller Code
+                          </MDBDropdownToggle>
+                          <MDBDropdownMenu>
+                          {getuserdata.map((element, id) => {
+                            return (
+                                   <>
+                                   <option>{element.TravellerCode}</option>
+                                   </>
+                                       )
+                               })}
+                          </MDBDropdownMenu>
+                        </MDBDropdown> */}
+                                                
+              </div>
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="envelope me-3" size='lg'/>
+                {/* <MDBInput label='Traveller Name' id='form2' type='text' value={inpval.TravellerName} onChange={setdata} name="TravellerName" placeholder="Enter Name"/> */}
+                {/* <MDBDropdown>
+                    <MDBDropdownToggle tag='a' className='btn btn-outline-secondary'>
+                      Traveller Name
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu>
+                    <MDBDropdownItem link> 
+                    {getuserdata.map((element ) => {
+                                return (
+                                    <>
+                                    <option>{element.TravellerName}</option>
+                                    </>
+                                        )
+                                })}</MDBDropdownItem>
+                       </MDBDropdownMenu>
+                     </MDBDropdown> */}
+
                         <form>
-                            <select  value={inpval.TravellerName} onChange={setdata} name="TravellerName" class="form-control" className='widthreg'>
-                            <option>Traveller Name  .</option>
-                            {getuserdata.map((element, id) => {
+                            <select  value={inpval.TarvellerName} onChange={setdata} name="TravellerName" class="form-control">
+                            <option>Select Traveller Name</option>
+                            {getuserdata.map((element) => {
                                 return (
                                     <>
                                     <option>{element.TravellerName}</option>
@@ -169,40 +222,64 @@ console.log(getuserdata)
                                 })}
                             </select>
                         </form>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="exampleInputreferencecode1"><b>From</b></label>
-                        <input type="text" name="From" value={inpval.From} onChange={setdata} class="form-control" id="exampleid1" placeholder="Location" className='widthreg'></input>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputreferencecode1"><b>To</b></label>
-                        <input type="text" name="To" value={inpval.To} onChange={setdata} class="form-control" id="exampleid1" placeholder="To" className='widthreg1'></input>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="exampleInputreferencecode1"><b>Travelling Date</b></label>
-                        <input type="text" name="TravellingDate" value={inpval.TravellingDate} onChange={setdata} class="form-control" id="exampleid1" placeholder="Travelling Date" className='widthreg1'></input>
-                    </div>
-
-                    
-                    <div class="form-group">
-                        <label for="exampleInputreferencecode1"><b>Status</b></label>
-                        <select type="text" name="Status" value={inpval.Status} onChange={setdata} class="form-control" id="exampleid1" placeholder="Enter Dept Name" className='widthreg'>
-                        <option selected>Your Status  </option>
-                        <option>Active</option>
-                        <option>Inactive</option>
-                        </select>
-                    </div>
-                    
                     
 
-                    </form>
-                    <div className='submitbtn1'>
-                    <button type="submit" onClick={addinputdata1} class="btn btn-primary">Submit</button>
-                    </div>
+
+              </div>
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='From' id='form3' type='text' name="From" value={inpval.From} onChange={setdata} placeholder="Enter From (Location)"/>
+              </div>
+
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='To' id='form3' type='text' name="To" value={inpval.To} onChange={setdata} placeholder="Enter To (Location)"/>
+              </div>
+
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Travelling Date' id='form3' type='date' name="TravellingDate" value={inpval.TravellingDate} onChange={setdata} placeholder="Enter Travelling Date"/>
+              </div>
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Status' id='form3' type='text' name="Status" value={inpval.Status} onChange={setdata} placeholder="Enter Active Or Inactive"/>
+              </div>
+
+           
+
+            
+
+
+              
+
+
+              <MDBBtn className='mb-4' size='lg' type="submit" onClick={addinputdata1}>Register</MDBBtn>
+
+          
+
+            </MDBCol>
+
+            <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
+              <MDBCardImage src={kingimg1} fluid/>
+            </MDBCol>
+
+          </MDBRow>
+        </MDBCardBody>
+      </MDBCard>
+
+    </MDBContainer>
+
+
+
+
+
+
+
+
             </div>
         </div>
 

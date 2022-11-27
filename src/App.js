@@ -11,6 +11,7 @@ import Travellerregister from './Pages/Travellerregister';
 import Travellerlist from './Pages/Travellerlist';
 import Bookingregister from './Pages/Bookingregister';
 import Bookinglist from './Pages/Bookinglist';
+import Message from './Pages/Message';
 
 
 
@@ -19,11 +20,12 @@ function App() {
     <div className='Main'>
     <BrowserRouter>
     <Routes>
-       <Route path ='/' element={<Home></Home>} />
+       <Route path ='/home' element={<Home></Home>} />
        <Route path ='/travellerregister' element={<Travellerregister></Travellerregister>} />
        <Route path ='/travellerlist' element={<Travellerlist></Travellerlist>} />
        <Route path ='/bookingregister' element={<Bookingregister></Bookingregister>} />
        <Route path ='/bookingtable' element={<Bookinglist></Bookinglist>} />
+       <Route path ='/message' element={<Message></Message>} />
     </Routes>
     </BrowserRouter>
     </div>

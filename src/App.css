@@ -45,14 +45,34 @@
 }
 
 
+.container{
+  flex-direction: column;
+}
 
-.godrejlogo{
+
+
+
+.travelimg{
   height: 70px;
   width: 100px;
 }
 
+.travelimg1{
+  text-align: center;
+  /* background-color: lightgray; */
+}
+
+
+
+.acc{
+  align-items: center;
+      font-family: -webkit-body;
+}
+
+
 .navbar{
-  height: 70px;
+  height: 100px;
+  /* position: sticky; */
 }
 
 .big{
@@ -74,8 +94,8 @@ main{
   padding: 20px;
 }
 .sidebar{
-  background: limegreen;
-  color: #fff;
+  /* background: limegreen; */
+  /* color: #fff; */
   height: 100vh;
   width: 200px;
   transition: all 0.5s;
@@ -87,29 +107,47 @@ main{
 }
 .logo{
   font-size: 30px;
-  color: black;
+  color: yellow;
 }
 .bars{
   display: flex;
   font-size: 25px;
   margin-left: 50px;
+  color: yellow;
 }
 .link{
   display: flex;
-  color: #fff;
+  color: cyan;
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
 }
 .link:hover{
-  background:lightskyblue;
-  color: #000;
+  background:black;
+  color: white;
   transition: all 0.5s;
 }
 .active{
-  background: lightskyblue;
-  color: #000;
+  background: black;
+  color: white;
 }
 .icon, .link_text{
   font-size: 20px;
 }
+
+
+.tabletop{
+  color: white;
+  background-color: black;
+}
+
+.tablebottom{
+  color: white;
+  background-color: grey;
+}
+
+.travellerlist{
+  margin: 25px;
+  text-align: center;
+}
+

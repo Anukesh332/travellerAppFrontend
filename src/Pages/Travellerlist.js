@@ -5,6 +5,8 @@ import { geturl } from "./Config";
 import { CSVLink } from "react-csv";
 import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
+import { MDBTable } from 'mdb-react-ui-kit';
+
 
 const Travellerlist = () => {
   const [getuserdata, setUserdata] = useState([]);
@@ -62,85 +64,101 @@ const Travellerlist = () => {
 
 
 
-  let allresult;
-  const handleSearchall = (event) => {
-    let searchtextall = event.target.value;
-    console.log(searchtextall);
-    console.log(getuserdata);
-    allresult = getuserdata.filter((item) =>
-      item.EmployeeCode.toLowerCase()
-        .toLowerCase()
-        .includes(searchtextall.toLowerCase())
-    );
-    setUserdata(allresult);
-    console.log(allresult);
-  };
+  // let allresult;
+  // const handleSearchall = (event) => {
+  //   let searchtextall = event.target.value;
+  //   console.log(searchtextall);
+  //   console.log(getuserdata);
+  //   allresult = getuserdata.filter((item) =>
+  //     item.EmployeeCode.toLowerCase()
+  //       .toLowerCase()
+  //       .includes(searchtextall.toLowerCase())
+  //   );
+  //   setUserdata(allresult);
+  //   console.log(allresult);
+  // };
 
-  let allresults;
-  const handleSearchall1 = (event) => {
-    let searchtextall1 = event.target.value;
-    console.log(searchtextall1);
-    console.log(getuserdata);
-    allresults = getuserdata.filter((item) =>
-      item.EmployeeName.toLowerCase()
-        .toLowerCase()
-        .includes(searchtextall1.toLowerCase())
-    );
-    setUserdata(allresults);
-    console.log(allresults);
-  };
+  // let allresults;
+  // const handleSearchall1 = (event) => {
+  //   let searchtextall1 = event.target.value;
+  //   console.log(searchtextall1);
+  //   console.log(getuserdata);
+  //   allresults = getuserdata.filter((item) =>
+  //     item.EmployeeName.toLowerCase()
+  //       .toLowerCase()
+  //       .includes(searchtextall1.toLowerCase())
+  //   );
+  //   setUserdata(allresults);
+  //   console.log(allresults);
+  // };
 
   return (
     <header>
       
+<div className="king1">
+
 
       <Navbar/>
+      <h3 class="text-center">Traveller List</h3>
+      
+
     <div className="big">
+      
+      
     <Dashboard/>
+    
    
+<div class="mx-2"></div>
 
 
 
-      <div className="mt-5">
+ <MDBTable responsive>
+      <div className="mt-1">
         <div className="container">
           <div className="ems">
-            <h3>Traveller List</h3>
           </div>
-          {/* <div className="add_btn mt-2">
+          <div className="add_btn">
             <NavLink to="/travellerregister" className="btn btn-primary">
               Add User +
             </NavLink>
-          </div> */}
-{/* 
-          <CSVLink data={getuserdata} className="btn btn-success mb-3">
-            Download in Excel
-          </CSVLink> */}
+ 
+            </div> 
 
-          <table class="table">
+          <div className="add_btn">
+
+
+          <CSVLink data={getuserdata} className="btn btn-success">
+            Download in Excel
+          </CSVLink>
+          
+          </div> 
+           
+        <div class="table-responsive text-center" className="acc">
+          <table class="table table-bordered border-primary table-hover">
             <thead>
               <tr className="tabletop">
                 <th scope="col">
                   <div class="input-group">
                     <div class="form-outline">
-                      <input
+                      {/* <input
                         type="search"
                         id="form1"
                         class="form-control"
                         onChange={handleSearchall}
                         placeholder="Filter"
-                      />
+                      /> */}
                     </div>
                   </div>{" "}
                   Traveller Code
                 </th>
                 <th scope="col">
-                  <input
+                  {/* <input
                     type="search"
                     id="form1"
                     class="form-control"
                     onChange={handleSearchall1}
                     placeholder="Get by Name"
-                  />
+                  /> */}
                   Traveller Name
                 </th>
                 <th scope="col">Traveller Mail</th>
@@ -154,7 +172,7 @@ const Travellerlist = () => {
                 {/* <th scope='col'>Grade</th>
                 <th scope='col'>Department</th>
                 <th scope='col'>L+1</th> */}
-                <th scope="col"></th>
+                {/* <th scope="col"></th> */}
               </tr>
             </thead>
             <tbody>
@@ -212,6 +230,18 @@ const Travellerlist = () => {
             </tbody>
           </table>
         </div>
+        
+
+
+          
+          
+        </div>
+      </div>
+
+      </MDBTable>
+
+      <div class="mx-2"></div>
+
       </div>
 
 

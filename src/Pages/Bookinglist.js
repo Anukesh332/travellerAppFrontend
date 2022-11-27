@@ -5,6 +5,11 @@ import { geturl1 } from './Config'
 import { CSVLink } from "react-csv"
 import Dashboard from '../components/Dashboard'
 import Navbar from '../components/Navbar'
+import { MDBTable } from 'mdb-react-ui-kit';
+
+
+
+
 
 const Bookinglist = () => {
   const [getuserdata, setUserdata] = useState([])
@@ -58,27 +63,40 @@ const Bookinglist = () => {
    
 
    <Navbar/>
+   <h3 class="text-center">Booking Table</h3>
+
     <div className="big">
     <Dashboard/>
    
 
+    <div class="mx-2"></div>
 
 
 
-      <div className='mt-5'>
+    <MDBTable responsive>
+
+      <div className='mt-1'>
         <div className='container'>
           <div className='ems'>
-            <h3>Booking Table</h3>
           </div>
-          {/* <div className='add_btn mt-2'>
+          <div className='add_btn mt-1'>
             <NavLink to='/bookingregister' className='btn btn-primary'>
               Add User +
             </NavLink>
-          </div> */}
+          </div> 
 
-          {/* <CSVLink data={getuserdata} className="btn btn-success mb-3">Download in Excel</CSVLink> */}
+          <div className='add_btn mt-1'>
 
-          <table class='table'>
+           <CSVLink data={getuserdata} className="btn btn-success mb-3">Download in Excel</CSVLink>
+
+          </div> 
+
+
+
+          <div class="table-responsive text-center" className="acc">
+
+          <table class="table table-bordered border-primary table-hover">
+          
             <thead>
               <tr className='tabletop'>
                 <th scope='col'>Traveller Code</th>
@@ -93,7 +111,6 @@ const Bookinglist = () => {
                 {/* <th scope='col'>Grade</th>
                 <th scope='col'>Department</th>
                 <th scope='col'>L+1</th> */}
-                <th scope='col'></th>
               </tr>
             </thead>
             <tbody>
@@ -140,10 +157,13 @@ const Bookinglist = () => {
               })}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
 
+</MDBTable>
 
+<div class="mx-2"></div>
 
       </div>
 

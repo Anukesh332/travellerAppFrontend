@@ -3,6 +3,22 @@ import {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
 import {posturl} from './Config'
+import {
+    MDBBtn,
+    MDBContainer,
+    MDBRow,
+    MDBCol,
+    MDBCard,
+    MDBCardBody,
+    MDBCardImage,
+    MDBInput,
+    MDBIcon
+  }
+  from 'mdb-react-ui-kit';
+import  travelK  from '../images/travelk.jpg'
+
+
+
 
 const Travellerregister = () => {
 
@@ -103,12 +119,12 @@ const addinputdata = async(e)=>{
 
 
       <div>
-            <h1 className='ems'><i>Traveller Register</i></h1>
+            {/* <h1 className='ems'><i>Traveller Register</i></h1> */}
 
 
             <div>
 
-                <form className='regemp'>
+                {/* <form className='regemp'>
                     <div class="form-group">
                         <label for="exampleInputreferencecode1"><b>Traveller Code</b></label>
                         <input type="text" value={inpval.TravellerCode} onChange={setdata} name="TravellerCode" class="form-control" id="exampleInputreferencecode1" placeholder="Enter Traveller Code" className='widthreg'></input>
@@ -141,10 +157,84 @@ const addinputdata = async(e)=>{
                         <label for="exampleInputreferencecode1">Upload Image</label>
                         <input type="file" name="EndDate" value={inpval.EndDate} onChange={setdata} class="form-control" id="exampleid1" placeholder="Enter End Date" className='widthreg1'></input>
                     </div> */}
-                </form>
+                {/* </form>
                     <div className='submitbtn'>
                     <button type="submit" onClick={addinputdata} class="btn btn-primary">Submit</button>
-                    </div>
+                    </div> */} 
+
+
+<MDBContainer fluid>
+
+      <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
+        <MDBCardBody>
+          <MDBRow>
+            <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
+
+              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Traveller Register</p>
+
+              <div className="d-flex flex-row align-items-center mb-4 ">
+                <MDBIcon fas icon="user me-3" size='lg'/>
+                <MDBInput label='Traveller Code' id='form1' type='text' className='w-100' value={inpval.TravellerCode} onChange={setdata} name="TravellerCode" placeholder="Enter Traveller Code"/>
+              </div>
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="envelope me-3" size='lg'/>
+                <MDBInput label='Traveller Name' id='form2' type='text' value={inpval.TravellerName} onChange={setdata} name="TravellerName" placeholder="Enter Name"/>
+              </div>
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Traveller Mail' id='form3' type='email' name="TravellerMail" value={inpval.TravellerMail} onChange={setdata} placeholder="Enter Email"/>
+              </div>
+
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Traveller Gender' id='form3' type='text' name="TravellerGender" value={inpval.TravellerGender} onChange={setdata} placeholder="Enter Gender"/>
+              </div>
+
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Traveller DOB' id='form3' type='date' name="TravellerDOB" value={inpval.TravellerDOB} onChange={setdata} placeholder="Enter DOB"/>
+              </div>
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Traveller Number' id='form3' type='email' name="TravellerNumber" value={inpval.TravellerNumber} onChange={setdata} placeholder="Enter Phone Number"/>
+              </div>
+
+              <div className="d-flex flex-row align-items-center mb-4">
+                <MDBIcon fas icon="lock me-3" size='lg'/>
+                <MDBInput label='Validity Date of Card' id='form3' type='date' name="ValidDate" value={inpval.ValidDate} onChange={setdata} placeholder="Enter Validity Date upto"/>
+              </div>
+
+            
+
+
+              
+
+        
+
+              <MDBBtn className='mb-4' size='lg' type="submit" onClick={addinputdata}>Register</MDBBtn>
+
+            
+
+            </MDBCol>
+
+            <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
+              <MDBCardImage src={travelK} fluid/>
+            </MDBCol>
+
+          </MDBRow>
+        </MDBCardBody>
+      </MDBCard>
+
+    </MDBContainer>
+
+
+
+
             </div>
         </div>
 
