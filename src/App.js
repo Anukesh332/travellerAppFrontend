@@ -16,6 +16,8 @@ import Start from './Pages/Start';
 import Account from './Pages/Account';
 import Login from './Pages/Login';
 import Edittraveller from './Pages/Edittraveller';
+import Settings from './Pages/Settings';
+import Help from './Pages/Help';
 
 
 
@@ -34,6 +36,8 @@ function App() {
        <Route path ='/account' element={<Account></Account>} />
        <Route path ='/loginin' element={<Login></Login>} />
        <Route path ='/edittraveller' element={<Edittraveller></Edittraveller>} />
+       <Route path ='/settings' element={<Settings></Settings>} />
+       <Route path ='/help' element={<Help></Help>} />
     </Routes>
     </BrowserRouter>
     </div>

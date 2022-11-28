@@ -105,7 +105,7 @@ const Bookinglist = () => {
                 <th scope='col'>To</th>
                 <th scope='col'>Travilling Date</th>
                 <th scope='col'>Status</th>
-                <th scope='col'>View</th>
+                {/* <th scope='col'>View</th> */}
                 <th scope='col'>Edit</th>
                 <th scope='col'>Delete</th>
                 {/* <th scope='col'>Grade</th>
@@ -130,11 +130,11 @@ const Bookinglist = () => {
                       {/* <td>{element.department}</td> */}
                       {/* <td>{element.L1}</td> */}
 
-                      <td className='d-flex justify-content-between'>
+                      {/* <td className='d-flex justify-content-between'>
                         <NavLink to={`/details/${element._id}`}>
                           <button className='btn btn-success'>VIEW</button>
                         </NavLink>
-                        </td>
+                        </td> */}
 
                         <td>
                         <NavLink to='/edit2'>
