@@ -125,7 +125,7 @@ const addinputdata11 = async(e)=>{
     const data = await res.json();
     console.log(data);
 
-    if(res.status === 404 || !data){
+    if(res.status === 422 || !data){
         alert("error");
         console.log("error");
     }else{
