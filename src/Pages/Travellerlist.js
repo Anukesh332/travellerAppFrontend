@@ -210,7 +210,7 @@ const Travellerlist = () => {
                       </td>
 
                       <td>
-                        <NavLink to="/edit">
+                        <NavLink to="/edittraveller">
                           <button className="btn btn-primary">EDIT</button>
                         </NavLink>
                       </td>

@@ -15,6 +15,7 @@ import Message from './Pages/Message';
 import Start from './Pages/Start';
 import Account from './Pages/Account';
 import Login from './Pages/Login';
+import Edittraveller from './Pages/Edittraveller';
 
 
 
@@ -32,6 +33,7 @@ function App() {
        <Route path ='/' element={<Start></Start>} />
        <Route path ='/account' element={<Account></Account>} />
        <Route path ='/loginin' element={<Login></Login>} />
+       <Route path ='/edittraveller' element={<Edittraveller></Edittraveller>} />
     </Routes>
     </BrowserRouter>
     </div>
