@@ -19,22 +19,22 @@ const Dashboard = ({children}) => {
         {
             path:"/travellerlist",
             name:"Traveller List",
-            icon:<FaUserMd/>
+            icon:<FaTable/>
         },
         {
             path:"/travellerregister",
             name:"Traveller Register",
-            icon:<FaTable/>
+            icon:<FaUserMd/>
         },
         {
             path:"/bookingtable",
             name:"Booking Table",
-            icon:<MdPeople/>
+            icon:<BsTable/>
         },
         {
             path:"/bookingregister",
             name:"Booking Register",
-            icon:<BsTable/>
+            icon:<MdPeople/>
         },
         {
             path:"/message",

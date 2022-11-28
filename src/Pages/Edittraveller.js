@@ -250,7 +250,7 @@ const addinputdata11 = async(e)=>{
 
 
               
-              <button type="button" class="btn btn-primary" onClick={addinputdata11}>Register</button>
+              <button type="button" class="btn btn-primary" onClick={addinputdata11}>Edit</button>
         
                 
               {/* <MDBBtn className='mb-4' size='lg' type="submit" onClick={addinputdata}>Register</MDBBtn> */}
