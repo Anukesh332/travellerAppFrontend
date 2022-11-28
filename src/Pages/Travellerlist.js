@@ -40,7 +40,7 @@ const Travellerlist = () => {
 
   const deleteuser = async (TravellerCode) => {
     
-    const res2 = await fetch(`http://localhost:5000/Traveller/${TravellerCode}`, {
+    const res2 = await fetch(`https://adrt1h07b0.execute-api.us-east-1.amazonaws.com/Traveller/${TravellerCode}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
