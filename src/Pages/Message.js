@@ -9,7 +9,7 @@ import {
   MDBCardImage,
   MDBInput,
   MDBIcon,
-  MDBCheckbox
+  MDBTextArea
 }
 from 'mdb-react-ui-kit';
 
@@ -35,8 +35,7 @@ function Message() {
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
-                <MDBIcon fas icon="lock me-3" size='lg'/>
-                <MDBInput label='Feed Back' id='form3' type='password'/>
+              <MDBTextArea label='Feed Back' id='textAreaExample' rows={4} />
               </div>
 
             

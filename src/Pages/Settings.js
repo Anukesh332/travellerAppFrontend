@@ -12,7 +12,9 @@ import {
   MDBRange,
   MDBCheckbox,
   MDBCardTitle,
-  MDBCardText
+  MDBCardText,
+  MDBSwitch,
+  MDBRadio
 }
 from 'mdb-react-ui-kit';
 
@@ -35,6 +37,7 @@ function Settings() {
 
 
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
+    
             <MDBRange
                 defaultValue={4}
                 min='0'
@@ -44,7 +47,7 @@ function Settings() {
                 label='Brightness'
             />
             <MDBRange
-                defaultValue={2.5}
+                defaultValue={3}
                 min='0'
                 max='5'
                 step='0.5'
@@ -60,27 +63,25 @@ function Settings() {
                 label='Applicable Range'
             />
        
+            <p></p>
+            <p></p>
+
+            <MDBSwitch id='flexSwitchCheckDefault' label='Status' />
+
 
             </MDBCol>
 
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-            <MDBRange
-                defaultValue={3.5}
-                min='0'
-                max='5'
-                step='0.5'
-                id='customRange3'
-                label='Efficiency'
-            />
-            <MDBRange
-                defaultValue={1}
-                min='0'
-                max='5'
-                step='0.5'
-                id='customRange3'
-                label='Output'
-            />
+              <p></p>
+              <p></p>
+
+              <MDBRadio name='flexRadioDefault' id='flexRadioDefault1' label='Share Location (On)' />
+              <MDBRadio name='flexRadioDefault' id='flexRadioDefault1' label='Share Location (Off)' />
+
+            <p></p>
+            <p></p>
+
             <MDBRange
                 defaultValue={4.5}
                 min='0'
@@ -89,6 +90,11 @@ function Settings() {
                 id='customRange3'
                 label='Effectiveness'
             />
+            <p></p>
+            <p>Mode</p>
+            <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='Dark' />
+            <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='Bright' />
+            
               
             </MDBCol>
             
