@@ -161,7 +161,7 @@ console.log(getuserdata)
                 
     
                         <form>
-                            <select  value={inpval.TarvellerCode} onChange={setdata} name="TravellerCode" class="form-control">
+                            <select  value={inpval.TravellerCode} onChange={setdata} name="TravellerCode" class="form-control">
                             <option>Select Traveller Code </option>
                             {getuserdata.map((element, id) => {
                                 return (
@@ -211,7 +211,7 @@ console.log(getuserdata)
                      </MDBDropdown> */}
 
                         <form>
-                            <select  value={inpval.TarvellerName} onChange={setdata} name="TravellerName" class="form-control">
+                            <select  value={inpval.TravellerName} onChange={setdata} name="TravellerName" class="form-control">
                             <option>Select Traveller Name</option>
                             {getuserdata.map((element) => {
                                 return (

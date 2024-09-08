@@ -18,6 +18,7 @@ import Login from './Pages/Login';
 import Edittraveller from './Pages/Edittraveller';
 import Settings from './Pages/Settings';
 import Help from './Pages/Help';
+import Pcategory from './Pages/Pcategory';
 
 
 
@@ -38,6 +39,7 @@ function App() {
        <Route path ='/edittraveller' element={<Edittraveller></Edittraveller>} />
        <Route path ='/settings' element={<Settings></Settings>} />
        <Route path ='/help' element={<Help></Help>} />
+       <Route path ='/pcategory' element={<Pcategory></Pcategory>} />
     </Routes>
     </BrowserRouter>
     </div>
